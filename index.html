@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vishwajith's page</title>
+    <meta name="description" content="Vishwajith's page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" href="assets/vendor/icon/pageico.svg">
+    <link rel="preload" href="/assets/img/background-dark.webp" as="image">
+    <link rel="preload" href="/assets/img/background-light.webp" as="image">
+    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+</head>
+
+<body class="dark-mode">
+    
+    <!-- Navigation Menu-->
+    <header id="header">
+        <nav class="menu">
+            <ul id="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project Showcase</a></li>
+                <li><a href="#moments">Moments</a></li>
+                <li><a href="#game">Ultimate Pong</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-btn"><i class="bi"></i> </button></li>
+            </ul>
+            <button id="menu-button" class="dark-mode"><i class="bi bi-list"></i></button>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu dark-mode" id="mobile-menu">
+        <ul>
+            <li><a href="#home"><i class="bi bi-house-door-fill"></i> Home</a></li>
+            <li><a href="#about"><i class="bi bi-person-fill"></i> About</a></li>
+            <li><a href="#project"><i class="bi bi-cpu-fill"></i> Project Showcase</a></li>
+            <li><a href="#moments"><i class="bi bi-camera-fill"></i> Moments</a></li>
+            <li><a href="#game"><i class="bi bi-dpad-fill"></i> Ultimate Pong</a></li>
+            <li><a href="#contact"><i class="bi bi-person-lines-fill"></i> Contact</a></li>
+            <li><a href="#" id="mobiletheme-btn"><i class="bi"></i> </a></li>
+        </ul>
+    </div>
+
+    <!--Home Section-->
+    <div id="home" class="dark-mode">
+        <h1>Hi there! I am Vishwajith K V</h1>
+        <h5 class="typewrite" data-period="4000"
+            data-type='[ "I am a beginner.", "I like to code", "I like cats.", "I also do some photography." ]'><span
+                class="wrap"></span></h5>
+
+    </div>
+
+    <!--About Section-->
+    <section id="about" class="dark-mode">
+        <div class="container">
+            <div class="about-content">
+                <div class="profile">
+                    <img src="/assets/img/pfp.jpg" alt="Profile Picture">
+                    <ul>
+                        <li><strong>Name:</strong> Vishwajith</li>
+                        <li><strong>Email:</strong>me.vishwajithkv@gmail.com</li>
+                        <li><strong>Github Username:</strong>vishwajithkv</li>
+                    </ul>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="skill">
+                            <span>HTML</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 2%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description">
+                    <h2>About Me</h2>
+                    <p>I am currently on a learning journey, diving into C++ and Web Development while pursuing a
+                        degree in computer science. My interest in coding and technology drives me to continuously
+                        improve my skills and staying updated in this ever-evolving field.</p>
+                    <p>My interest in computer science grew when I started compiling custom ROMs for the Moto G5 Plus
+                        (potter). This experience helped me understand various aspects of the Android system and allowed
+                        me to enhance the ROMs based on user experience.
+                    </p>
+                    <p>I've also used AI to develop a game that replicates Google's famous Dino game. Leveraging my
+                        knowledge of C++, I fixed the mistakes made by the AI, though the game still needs some improvements. 
+                        Another project of mine is Ultimate Pong, which is featured on this website. It
+                        was created with the latest ChatGPT-4o to make the page more interactive.
+                    </p>
+                    <p>In my free time, I enjoy photography. Although I don't have a professional camera, I use my
+                        mobile phone with GCam to capture beautiful scenery of mountains and the sky.
+                    </p>
+                    <p>With a blend of studies, projects, and hobbies, I'm continually learning and growing. My path in
+                        computer science is just beginning, and I'm looking forward to the adventures and opportunities
+                        that lie ahead.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Project Showcase-->
+    <section id="project">
+        <h2>Projects built by me!</h2>
+        <p>I've dived into the world of Android customization by putting together PEX (Pixel Extended) and DerpFest
+            Official for my Moto G5 Plus.</p>
+        <div class="customrom">
+            <img src="assets/img/ss1.jpg">
+            <img src="assets/img/ss2.jpg">
+        </div>
+        <p>Here's my version of Google's famous Dino game, recreated using AI and my C++ skills. You can find it on my
+            GitHub, but I'm still fine-tuning it, so there's more work to be done!
+        </p>
+        <div class="dino">
+            <img src="assets/img/dino.png">
+        </div>
+    </section>
+
+    <!-- Moments -->
+    <section id="moments" class="dark-mode">
+        <h2>Moments Captured by Me!</h2>
+        <P>During my free time, I enjoy capturing the beauty of mountains and the sky. These photos showcase the
+            peaceful moments of nature, from serene sunsets to captivating cloud formations. Here are some of my
+            masterpieces</P>
+        <div class="mySlides">
+            <div class="numbertext">1 / 3</div>
+            <img src="assets/img/moments/sky.jpg">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 3</div>
+            <img src="assets/img/moments/falls.jpg">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 3</div>
+            <img src="assets/img/moments/sea.jpg">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!--Ultimate Pong-->
+    <section id="game" class="dark-mode">
+        <h2>Ultimate Pong</h2>
+        <p>This is a 2D Pong game created using JavaScript with ChatGPT-4o. The rule of the game is simple: you need to
+            score 50 points to beat the computer, which can be quite challenging.</p>
+        <p>Beating the computer can be a little tricky due to its accurate ball-tracking AI. However, there's a way to
+            win if you decide to open your console and cheat. Unfortunately, the game is not supported on mobile devices
+            or tablets.</p>
+        <div class="game-container">
+            <canvas id="pong"></canvas>
+            <p>GO GET A PC OR A LAPTOP!</p>
+        </div>
+        <div id="game-menu">
+            <button id="play-button" type="image"><i class="bi bi-play-fill"></i></button>
+            <button id="replay-button" style="display: none;"><i class="bi bi-arrow-counterclockwise"></i></button>
+            <button id="pauseBtn" style="display: none;"><i class="bi bi-play-fill"></i></button>
+        </div>
+
+        <div id="game-over" style="display: none;">
+            <h1 id="game-over-text"></h1>
+            <h2 id="game-over-message"></h2>
+        </div>
+    </section>
+
+    <!-- Contact Section-->
+    <footer id="contact">
+        <h3>Vishwajith's Page </h3>
+        <h4><i class="bi bi-envelope-fill"></i> Email: me.vishwajithkv@gmail.com</h4>
+        <ul>
+            <li><i class="bi bi-github"></i> <a href="https://github.com/vishwajithkv">Github</a></li>
+            <li><i class="bi bi-sourceforge"></i> <a
+                    href="https://sourceforge.net/projects/roji-builds/files/">Sourceforge</a></li>
+            <li><i class="bi bi-chat-square"></i> <a
+                    href="https://xdaforums.com/m/leoxsys.11696449/#recent-content">XDA</a></li>
+        </ul>
+        <p>Thanks for visiting my page!. You can bookmark this page for latest changes or you can follow me in
+            Github.</p>
+        <p> © Copyright Vishwajith's page. All Rights Reserved</p>
+        <p>You can find the page's source code in my <a
+                href="https://github.com/vishwajithkv/vishwajithkv.github.io">Github</a>
+        </p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top dark-mode"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Game Script -->
+    <script>
+        if (window.innerWidth > 600) {
+            var script = document.createElement('script');
+            script.src = '/assets/vendor/pong/pong.js';
+            document.head.appendChild(script);
+        }
+    </script>
+</body>
+
+</html>
