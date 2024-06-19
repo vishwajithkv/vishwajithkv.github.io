@@ -4,6 +4,7 @@
 @font-face {
     font-family: 'ComicNeue-Regular';
     src: url('/assets/vendor/fonts/ComicNeue-Regular.ttf');
+    font-display: swap;
 }
 
 :root {
