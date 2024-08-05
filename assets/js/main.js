@@ -161,23 +161,3 @@ function setThemeBasedOnUserPreference() {
 document.addEventListener('DOMContentLoaded', function () {
   setThemeBasedOnUserPreference();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
