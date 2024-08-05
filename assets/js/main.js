@@ -105,109 +105,62 @@ if (backToTopButton) {
 /*---------------------------------------------
             Website theme changer.
 ----------------------------------------------*/
-const homeSection = document.getElementById('home');
-const aboutSection = document.getElementById('about');
-const momentSection = document.getElementById('moments');
-const gameSection = document.getElementById('game');
-const toggleMobileMenu = document.getElementById('menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-
-
 const toggleBtn = document.querySelector('#theme-btn');
 const mobileToggleBtn = document.querySelector('#mobiletheme-btn');
 
-// Function to toggle between light and dark mode icons
-function toggleThemeIconsAndText() {
-  if (document.body.classList.contains('dark-mode')) {
-      // Set icon for light mode
-      toggleBtn.innerHTML = '<i class="bi bi-brightness-high-fill"></i>';
-      mobileToggleBtn.innerHTML = '<i class="bi bi-brightness-high-fill"></i> Light Mode';
-  } else {
-      // Set icon for dark mode
-      toggleBtn.innerHTML = '<i class="bi bi-moon-fill"></i>';
-      mobileToggleBtn.innerHTML = '<i class="bi bi-moon-fill"></i> Dark Mode';
-  }
-}
-
 // Event listener for theme toggle button
-toggleBtn.addEventListener('click', toggleMode);
+toggleBtn.addEventListener('click', toggleTheme);
 
 // Prevent default anchor behavior
 mobileToggleBtn.addEventListener('click', (e) => {
   e.preventDefault(); 
-  toggleMode();
+  toggleTheme();
 });
 
-function toggleMode() {
-  document.body.classList.toggle('dark-mode');
-  document.body.classList.toggle('light-mode');
-  homeSection.classList.toggle('dark-mode');
-  homeSection.classList.toggle('light-mode');
-  aboutSection.classList.toggle('dark-mode');
-  aboutSection.classList.toggle('light-mode');
-  momentSection.classList.toggle('dark-mode');
-  momentSection.classList.toggle('light-mode');
-  gameSection.classList.toggle('dark-mode');
-  gameSection.classList.toggle('light-mode');
-  backToTopButton.classList.toggle('dark-mode');
-  backToTopButton.classList.toggle('light-mode');
-  toggleMobileMenu.classList.toggle('dark-mode');
-  toggleMobileMenu.classList.toggle('light-mode');
-  mobileMenu.classList.toggle('dark-mode');
-  mobileMenu.classList.toggle('light-mode');
+
+function toggleTheme() {
+
+  if (document.documentElement.getAttribute('data-theme') === 'dark') {
+    document.documentElement.removeAttribute('data-theme');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+
+  // Update icons and text
+  toggleThemeIconsAndText();
+
+}
+
+function toggleThemeIconsAndText() {
+  if (document.documentElement.getAttribute('data-theme') === 'dark') {
+    // Set icon and text for light mode
+    toggleBtn.innerHTML = '<i class="bi bi-brightness-high-fill"></i>';
+    mobileToggleBtn.innerHTML = '<i class="bi bi-brightness-high-fill"></i> Light Mode';
+  } else {
+    // Set icon and text for dark mode
+    toggleBtn.innerHTML = '<i class="bi bi-moon-fill"></i>';
+    mobileToggleBtn.innerHTML = '<i class="bi bi-moon-fill"></i> Dark Mode';
+  }
+}
+
+// Function to detect and set theme based on user's preference
+function setThemeBasedOnUserPreference() {
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (prefersDarkScheme) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+
+  // Update icons and text based on initial theme
   toggleThemeIconsAndText();
 }
 
-// Call the function initially to set the correct icon based on the initial theme mode
-toggleThemeIconsAndText();
-
-// Check if dark mode is preferred by the user
-const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-// Function to set the initial theme based on user preference
-function setInitialTheme() {
-  if (prefersDarkMode) {
-    document.body.classList.add('dark-mode');
-    document.body.classList.remove('light-mode');
-    homeSection.classList.add('dark-mode');
-    homeSection.classList.remove('light-mode');
-    aboutSection.classList.add('dark-mode');
-    aboutSection.classList.remove('light-mode');
-    momentSection.classList.add('dark-mode');
-    momentSection.classList.remove('light-mode');
-    gameSection.classList.add('dark-mode');
-    gameSection.classList.remove('light-mode');
-    backToTopButton.classList.add('dark-mode');
-    backToTopButton.classList.remove('light-mode');
-    toggleMobileMenu.classList.add('dark-mode');
-    toggleMobileMenu.classList.remove('light-mode');
-    mobileMenu.classList.add('dark-mode');
-    mobileMenu.classList.remove('light-mode');
-  }
-
-  else {
-    document.body.classList.add('light-mode');
-    document.body.classList.remove('dark-mode');
-    homeSection.classList.add('light-mode');
-    homeSection.classList.remove('dark-mode');
-    aboutSection.classList.add('light-mode');
-    aboutSection.classList.remove('dark-mode');
-    momentSection.classList.add('light-mode');
-    momentSection.classList.remove('dark-mode');
-    gameSection.classList.add('light-mode');
-    gameSection.classList.remove('dark-mode');
-    backToTopButton.classList.add('light-mode');
-    backToTopButton.classList.remove('dark-mode');
-    toggleMobileMenu.classList.add('light-mode');
-    toggleMobileMenu.classList.remove('dark-mode');
-    mobileMenu.classList.add('light-mode');
-    mobileMenu.classList.remove('dark-mode');
-  }
-  toggleThemeIconsAndText();
-}
-
-// Set the initial theme when the page loads
-document.addEventListener('DOMContentLoaded', setInitialTheme);
+// Call the function to set theme based on user's preference on page load
+document.addEventListener('DOMContentLoaded', function () {
+  setThemeBasedOnUserPreference();
+});
 
 
 
